@@ -1,0 +1,22 @@
+config:
+  use_colors: True
+  send_anonymous_usage_stats: False
+
+spark_thrift_server:
+  target: local
+  outputs:
+    local:
+      type: spark
+      method: thrift
+      schema: example
+      host: localhost
+      port: 10000
+      user: dbt.example
+      connect_retries: 5
+      connect_timeout: 60
+    dev:
+      type: spark
+      method: thrift
+      schema: anotherSchema
+      host: anotherServer
+      port: 10000

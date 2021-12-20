@@ -1,0 +1,12 @@
+version: '2.2'
+services:
+    spark-thrift-server:
+       image: spark-thrift-server-dbt-ge
+       ports:
+           - 10000:10000
+           - 4040:4040
+       networks:
+           - default
+
+networks:
+    default:

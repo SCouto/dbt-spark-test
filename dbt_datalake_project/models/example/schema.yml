@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: source
+    schema: example
+    tables:
+      - name: taxi_zone_lookup
+models:
+  - name: taxi_zone_incremental
+    columns: 
+      - name: borough
+        tests:
+          - accepted_values:
+              values: ['Manhattan', 'Staten Island', 'Queens', 'Brooklyn', 'Bronx', 'Unknown', 'EWR']
