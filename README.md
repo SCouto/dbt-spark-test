@@ -89,7 +89,7 @@ dbt run --models dt --target dev --vars '{"ptLowerLimit": "2021060100", "ptUpper
 dbt run --models dt --vars '{"ptLowerLimit": "2021060100", "ptUpperLimit": "2021070608", "dt": "2021070608"}'
 ```
 
-- This will create a table called dbtsink in the schema defined in profiles.yml(ref_hourly_infojobs_events_behaviourpt)
+- This will create a table called dbtsink in the schema defined in profiles.yml()
 
 ## Testing in Dev
 - Tests can be found as sql files in test folder inside the model folder
